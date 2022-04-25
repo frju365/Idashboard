@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "AlfaslabOne";
+  src: local("AlfaslabOne"),   url(./fonts/AlfaSlabOne-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+.widget {
+  width: 350px;
+  height: auto;
+  position: absolute;
+}
+
+.widgets-space {
+  position: relative;
+}
+
+.widget > div {
+  position: relative;
+}
+
+.bord-haut, .bord-bas, .bord-gauche, .bord-droite {
+  position:absolute;
+  background: #b6b6b6;
+}
+
+.bord-gauche, .bord-droite  {
+  height: 100%;
+  width: 2px;
+}
+
+.bord-haut, .bord-bas  {
+  height: 2px;
+  width: 100%;
+}
+.bord-haut {top: 0;}
+.bord-bas {bottom: 0;}
+.bord-gauche {left: 0;}
+.bord-droite {right: 0;}
+
+.widget-content {
+  max-height: 300px;
+  overflow: auto;
+  padding: 20px;
+}
+
+.window-title {
+  background: #b6b6b6;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+
+  & svg {
+    fill: white!important;
+  }
+}
+
+.menu-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  background: white;
+  z-index: 1000;
+
+  & .md-button-content {
+    color: #FD002A;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+
+.logo-igoogle {
+  margin: 0 20px;
+  font-family: AlfaslabOne, sans-serif;
+  font-size: 25px;
+
+  & img {
+    max-height: 60px;
+  }
+}
+
+.footer {
+  background: #F2F2F2;
+}
+
+.widget {
+
+  & .md-field label {
+    font-size: 13px;
+  }
+
+  // On force le background des composants:
+  & .widget-content .md-content.md-theme-default {
+    background-color: inherit;
+  }
+
+  & .content-article {
+    display: flex;
+
+    & a {
+
+      color: black;
+      text-decoration: underline;
+      font-weight: bold;
+
+      &:hover {
+        color: #55a5ff;
+      }
+
+    }
+
+
+    & div:nth-child(1) {
+      width: 70%;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    & div:nth-child(2) {
+      width: 30%;
+    }
+
+    & img {
+      width: 300px;
+    }
+  }
+}
+
+// Widget de recherche sur les sites de l'université.
+.searchWidget {
+
+  & .single-item {
+    text-align: left;
+  }
+
+}
+
+
+// Style pour le color picker
+.verte__guide {
+  border: black solid 1px;
+  border-radius: 50%;
+}
+
+// Liste des widgets au dessus de tous les autres éléments.
+.md-menu-content-bottom-start { z-index: 100000}
+
+
